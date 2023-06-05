@@ -1,0 +1,21 @@
+{
+  "name": "check-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon server.js"
+  },
+  "author": "oumayma",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "generate-password": "^1.7.0",
+    "nodemailer": "^6.9.3"
+    
+  }
+ 
+}

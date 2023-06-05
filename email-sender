@@ -1,0 +1,28 @@
+const nodemailer = require('nodemailer');  
+  
+let transporter = nodemailer.createTransport({  
+  service: 'gmail',
+  auth: {  
+    user: 'oumayma@gmail.com', // email de votre votre compte google
+    pass: 'jikhfred' // password de votre compte google
+  }  
+});
+/* from*/
+
+let mail = {  
+    from: 'senderemail@gmail.com',  
+    to: 'recipientemail@gmail.com',  
+    subject: 'My first email !',  
+    text: 'This email was sent with Nodejs and nodemailer using gmail SMTP server' 
+    // on peut remplacer l'attribut `text`par `html`si on veut que le cors de notre email supporte le HTML
+    // html:  '<h1>This email use html</h1>'
+  };
+/* send */
+
+transporter.sendMail(mail, (error, info) => {  
+    if (error) {  
+      console.log(error);  
+    } else {  
+      console.log('Email: ' + info.response);  
+    }  
+  });
